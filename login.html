@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at top left, #000000, #2e2d30);
+      
+    }
+
+
+
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      width: 400px;
+      padding: 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+      font-size: 18px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .btn {
+      display: block;
+      margin: auto;
+      margin-top: 30px;
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #0069d9;
+      transform: translateY(-2px);
+    }
+
+    .forgot-password {
+      color: #000000;
+    }
+
+    .forgot-password:hover {
+      color: #0069d9;
+    }
+  </style>
+  <script>
+    function fun() {
+      email = /^\w+([\.|-]?\w+)*@([\.|-]?\w+)*(\.\w{2,3})+$/
+      e = document.f1.email.value
+      f = 0
+      if (email.test(e)) {
+        alert('Successfully login')
+      }
+      else {
+        alert('Invalid email')
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="home.html"><img class="img1" src="C:\Users\kunjd\Downloads\canteen-logo.png">Shree Ram Canteen</a>
+    <button class="navbar-toggler bg-light ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order.html">Order</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help.html">Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+  <div class="background"></div>
+  <div class="login-container">
+    <h1>Login</h1>
+    <p>Please enter your email and password to login.</p>
+    <form name="f1" onsubmit="fun()">
+        <label>Email</label>
+        <input type="email" id="email" name="email" required>
+        <label>Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="btn">Login</button>
+        <p><a href="#" class="forgot-password" style="text-decoration: none;">Forgot password?</a></p>
+        <p><a href="home.html" class="forgot-password" style="text-decoration: none;">Return To The Home</a></p>
+    </form>
+  </div>
+</body>
+</html>
